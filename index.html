@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Individual Polling Units</title>
+</head>
+<body>
+    <h1>Individual Polling Units</h1>
+    <ul>
+        {% for unit in polling_units %}
+            <li><a href="{{ url_for('get_polling_unit_result', unit_id=unit[0]) }}">Polling Unit {{ unit[0] }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
